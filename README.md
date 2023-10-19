@@ -37,6 +37,8 @@ You will need to create and upload the following files:
 
 > **Note:** It's not required to pass all the unit tests to complete this assignment but it is recommended that you use the tests as a guide to deliver a functional application and meet the rubric requirements.
 
+> **Tip:** Do not install additional packages than the ones that are already in requirements.txt.
+
 ## Product Backlog
 
 > The Product Manager has already created the user stories for _SentimentScope - Sentiment Analyzer_. Each of the user stories is listed below, and your Product Manager wants them to be implemented in the order in which they are listed. Another developer has already written the tests for the application so that you don't have to.
