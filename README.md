@@ -30,10 +30,13 @@ You will need to create and upload the following files:
 
 ## Installation
 
+Please feel free to work on this project either on your local computer or through Github Codespaces. To start a Codespace, simply click on the "Code" button and create a new Codespace in your forked repository.
+
 1. Fork and clone this repository.
-2. Install the requirements `pip install -r requirements.txt`
-3. To run the app simply use the following command: `gunicorn app:app`
-4. To run the tests simply use the following command: `pytest tests/*.py`
+2. Create a virtual environment **Note:** This project requires **Python 3.10** or above. If you have a previous version, [click here](https://saturncloud.io/blog/how-to-use-different-python-versions-with-virtualenv/) for instructions on how to create a virtual environment with a specific version of Python.
+3. Install the requirements: `pip install -r requirements.txt`
+4. To run the app simply use the following command: `gunicorn app:app`
+5. To run the tests simply use the following command: `pytest tests/*.py`
 
 > **Note:** It's not required to pass all the unit tests to complete this assignment but it is recommended that you use the tests as a guide to deliver a functional application and meet the rubric requirements.
 
