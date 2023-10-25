@@ -257,11 +257,11 @@ Run the code in the notebook to verify that your model works. The output should 
 
 ### US-04 Integrate the model and tokenizer in your application
 
-#### 1. Upload the tokenizer and model
+#### 1. Add the tokenizer and model
 
-Upload the tokenizer and model in your `models` folder.
+Add the tokenizer and model in your `models` folder.
 
-![Upload the tokenizer and model](static/screenshots/tokenizermodel.png)
+![Add the tokenizer and model](static/screenshots/tokenizermodel.png)
 
 #### 2. Import the libraries in `app.py`
 
