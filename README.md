@@ -35,8 +35,8 @@ You will need to create and upload the following files:
 
 ![Alt text](static/screenshots/codespaces.png)
 
-3. Install the requirements: `pip install -r requirements.txt`
-4. To run the app simply use the following command: `gunicorn app:app`
+3. Codespaces will automatically install the requirements for you. If you need to install manually run: `pip install -r requirements.txt`
+4. To run the app simply use the following command: `python app.py` or `gunicorn app:app`
 5. To run the tests simply use the following command: `pytest tests/*.py`
 
 > **Note:** It's not required to pass all the unit tests to complete this assignment but it is recommended that you use the tests as a guide to deliver a functional application and meet the rubric requirements.
