@@ -31,13 +31,13 @@ You will need to create and upload the following files:
 ## Installation
 
 1. Fork this repository.
-2. Create a Codespace for your project. GitHub Codespaces will automatically create a fully-configured development environment for your project in the cloud.
+2. Create a Codespace for your project.
 
 ![Alt text](static/screenshots/codespaces.png)
 
-3. Codespaces will automatically install the requirements for you. If you need to install manually run: `pip install -r requirements.txt`
-4. To run the app simply use the following command: `python app.py` or `gunicorn app:app`
-5. To run the tests simply use the following command: `pytest tests/*.py`
+3. GitHub Codespaces will automatically create a fully-configured development environment for your project in the cloud. If you need to install the requirements manually run: `pip install -r requirements.txt`
+4. To run the app, use the following command: `python app.py` or `gunicorn app:app`
+5. To run the tests, use the following command: `pytest tests/*.py`
 
 > **Note:** It's not required to pass all the unit tests to complete this assignment but it is recommended that you use the tests as a guide to deliver a functional application and meet the rubric requirements.
 
