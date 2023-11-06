@@ -33,7 +33,7 @@ You will need to create and upload the following files:
 1. Fork and clone this repository.
 2. Create a Codespace for your project. GitHub Codespaces will automatically create a fully-configured development environment for your project in the cloud.
 
-![Alt text](codespaces.png)
+![Alt text](static/screenshots/codespaces.png)
 
 3. Install the requirements: `pip install -r requirements.txt`
 4. To run the app simply use the following command: `gunicorn app:app`
