@@ -241,7 +241,7 @@ Use [this Colab notebook](https://colab.research.google.com/drive/1neUIezfOo2qme
 
 #### 1. Upload the tokenizer and model to Google Colab.
 
-Upload the `tokenizer.pickle` and `uci_sentimentanalysis.h5` files to the Google Colab environment that your working on. 
+Upload the `tokenizer.pickle` and `uci_sentimentanalysis.h5` files to the Google Colab environment that you are working on. 
 
 ![Upload to Colab](static/screenshots/upload-colab.png)
 
