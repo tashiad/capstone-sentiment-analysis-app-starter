@@ -30,7 +30,7 @@ You will need to create and upload the following files:
 
 ## Installation
 
-1. Fork and clone this repository.
+1. Fork this repository.
 2. Create a Codespace for your project. GitHub Codespaces will automatically create a fully-configured development environment for your project in the cloud.
 
 ![Alt text](static/screenshots/codespaces.png)
