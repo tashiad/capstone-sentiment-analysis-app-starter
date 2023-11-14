@@ -25,8 +25,8 @@ You will need to create and upload the following files:
 | File name     | Description                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------|
 | notebooks/UCI_Sentiment_Analysis.ipynb   | The notebook that you use to create your own model. You will create and upload this file.      |
-| models/tokenizer.pickle   | The tokenizer object used for predicting sentiment analysis. You create and upload this file.      |
-| models/uci_sentimentanalysis.h5   | Your keras sentiment analysis model. You create and upload this file.      |
+| models/tokenizer.pickle   | The tokenizer object used for predicting sentiment analysis. You will create and upload this file.      |
+| models/uci_sentimentanalysis.h5   | Your keras sentiment analysis model. You will create and upload this file.      |
 
 ## Installation
 
@@ -77,7 +77,7 @@ Import and use VADER in your application so that it calculates the sentiment ana
 
 > **Tip**: Use `text = request.form.get("user_text")` to get the text from the form.
 
-> **Tip**: use `sentiment = analyzer.polarity_scores(text)` to calculate the scores.
+> **Tip**: Use `sentiment = analyzer.polarity_scores(text)` to calculate the scores.
 
 #### 3. Modify `form.html` so that it prints the scores.
 
@@ -181,7 +181,7 @@ y = df['label'].values
 
 #### 5. Split the dataset
 
-Split the dataset into training and test sets using the `train_test_split`` function from sklearn.
+Split the dataset into training and test sets using the `train_test_split` function from sklearn.
 
 ```python 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.12)
@@ -235,7 +235,7 @@ The tokenizer and the trained model are ready to be used in your app. Download t
 
 ### US-03 Test your model
 
-You now have a model and a tokenizer that can be used in your app. Before integrating into your Flask application, you will need to test that the model and tokenizer files that you created work as expected.
+You now have a model and a tokenizer that can be used in your app. You will need to test that the model and tokenizer files that you created work as expected before integrating them into your Flask application.
 
 Use [this Colab notebook](https://colab.research.google.com/drive/1neUIezfOo2qmeysWkCHhla2VitGpm5e-?usp=sharing) to test that your model and tokenizer work as expected.
 
@@ -341,7 +341,7 @@ Display the result in `form.html`:
 
 The user interface design is completely up to you. Feel free to use ChatGPT or another AI assistant to build the UI.
 
-Here are some examples of how your app may look like:
+Here are some examples of what your app may look like:
 
 #### Example 1:
 
