@@ -39,6 +39,8 @@ You will need to create and upload the following files:
 4. To run the app, use the following command: `python app.py` or `gunicorn app:app`
 5. To run the tests, use the following command: `pytest tests/*.py`
 
+> **Tip:** Review the [Github Codespaces documentation](https://docs.github.com/en/codespaces/getting-started/quickstart) if you are unsure on how to run and test your app from Codespaces.
+
 > **Note:** It's not required to pass all the unit tests to complete this assessment, but it is recommended that you use the tests as a guide to deliver a functional application and meet the rubric requirements.
 
 ## Product Backlog
