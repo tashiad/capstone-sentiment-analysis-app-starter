@@ -131,7 +131,7 @@ Import the necessary libraries for data manipulation and deep-learning modeling.
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from keras.layers import Dense, Embedding, LSTM
