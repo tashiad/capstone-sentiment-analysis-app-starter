@@ -9,13 +9,13 @@
             <br>
             <input type="submit" value="Analyze Text">
         </form>
-
         {% if sentiment %}
-            <h3>Sentiment Scores:</h3>
             <p>Positive: {{ sentiment['pos'] * 100 }}%</p>
             <p>Negative: {{ sentiment['neg'] * 100 }}%</p>
             <p>Neutral: {{ sentiment['neu'] * 100 }}%</p>
             <p>Compound: {{ sentiment['compound'] }}</p>
+            <hr>
+            <p><strong>Custom Model Positive Score:</strong> {{ sentiment['custom model positive'] }}</p>
         {% endif %}
     </body>
 </html>
