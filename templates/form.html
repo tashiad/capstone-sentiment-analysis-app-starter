@@ -1,21 +1,158 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sentiment Analysis</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 480px;
+            width: 90%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #4a90e2;
+        }
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        textarea:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        input[type="submit"] {
+            margin-top: 1rem;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4a90e2;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #357abd;
+        }
+        .results {
+            margin-top: 2rem;
+            background: #e9f0ff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: #2c3e50;
+        }
+        .results p {
+            margin: 0.4rem 0;
+            font-size: 1rem;
+        }
+        .results p strong {
+            color: #4a90e2;
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            border-top: 1px solid #d0d7de;
+        }
+        .bar-container {
+            background: #d0d7de;
+            border-radius: 20px;
+            height: 20px;
+            margin: 0.3rem 0 1rem 0;
+            overflow: hidden;
+        }
+        .bar {
+            height: 100%;
+            border-radius: 20px;
+            transition: width 0.5s ease;
+        }
+        .bar.pos {
+            background-color: #4caf50;
+        }
+        .bar.neg {
+            background-color: #f44336;
+        }
+        .bar.neu {
+            background-color: #999999;
+        }
+        .bar.compound {
+            background-color: #2196f3;
+        }
+        .input-display {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #fff9c4;
+            border-radius: 8px;
+            font-style: italic;
+            color: #665c00;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
         <form method="POST">
-            <textarea name="user_text" rows="5" cols="40" placeholder="Type something..."></textarea>
-            <br>
-            <input type="submit" value="Analyze Text">
+            <textarea name="user_text" rows="5" placeholder="Type something...">{{ request.form.user_text }}</textarea>
+            <input type="submit" value="Analyze Text" />
         </form>
+
         {% if sentiment %}
-            <p>Positive: {{ sentiment['pos'] * 100 }}%</p>
-            <p>Negative: {{ sentiment['neg'] * 100 }}%</p>
-            <p>Neutral: {{ sentiment['neu'] * 100 }}%</p>
-            <p>Compound: {{ sentiment['compound'] }}</p>
-            <hr>
+        <div class="input-display">
+            <strong>Analyzing this text:</strong><br>
+            {{ request.form.user_text }}
+        </div>
+
+        <div class="results">
+            <p><strong>Positive:</strong> {{ (sentiment['pos'] * 100) | round(2) }}%</p>
+            <div class="bar-container">
+                <div class="bar pos" style="width: {{ sentiment['pos'] * 100 }}%;"></div>
+            </div>
+
+            <p><strong>Negative:</strong> {{ (sentiment['neg'] * 100) | round(2) }}%</p>
+            <div class="bar-container">
+                <div class="bar neg" style="width: {{ sentiment['neg'] * 100 }}%;"></div>
+            </div>
+
+            <p><strong>Neutral:</strong> {{ (sentiment['neu'] * 100) | round(2) }}%</p>
+            <div class="bar-container">
+                <div class="bar neu" style="width: {{ sentiment['neu'] * 100 }}%;"></div>
+            </div>
+
+            <p><strong>Compound:</strong> {{ sentiment['compound'] | round(3) }}</p>
+            <div class="bar-container">
+                <div class="bar compound" style="width: {{ ((sentiment['compound'] + 1) / 2) * 100 }}%;"></div>
+            </div>
+
+            <hr />
             <p><strong>Custom Model Positive Score:</strong> {{ sentiment['custom model positive'] }}</p>
+        </div>
         {% endif %}
-    </body>
+    </div>
+</body>
 </html>
